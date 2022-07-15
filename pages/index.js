@@ -35,7 +35,7 @@ export default function Home() {
             autoPlay
             loop
             muted
-            className="object-contain lg:object-cover h-screen w-screen absolute rotate-90 lg:rotate-0"
+            className="object-contain lg:object-cover h-screen w-screen absolute rotate-90 xl:rotate-0"
           />
 
           <svg

@@ -7,7 +7,7 @@ function hologram() {
             autoPlay
             muted
             loop
-            className="object-contain lg:object-cover h-screen w-screen absolute rotate-90 lg:rotate-0 z-0"
+            className="object-contain lg:object-cover h-screen w-screen absolute rotate-90 xl:rotate-0 z-0"
           />
          
          
@@ -36,6 +36,9 @@ function hologram() {
               >
               </rect>
             </a>
+            <a xlinkHref="/about">
+    <rect x="1680" y="160" fill="#fff" opacity="100" width="360" height="130"></rect>
+  </a>
           </svg>
     </div>
   )
