@@ -18,16 +18,16 @@ export default function Home() {
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.od-labs.netlify.app" />
     <meta property="og:image" content="/" />
-    <meta name="twitter:title" content="Token Trees">
-    <meta name="twitter:description" content="Home of OD Lab">
-    <meta name="twitter:image" content="/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:title" content="Home of OD Labs">
+    <meta name="twitter:title" content="OD Labs" />
+    <meta name="twitter:description" content="Home of OD Lab" />
+    <meta name="twitter:image" content="/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Home of OD Labs" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Home of OD Labs">
-    <meta property="og:image" content="/">
-    <meta property="og:url" content="https://www.od-labs.netlify.app"></meta>
-      </Head>
+    <meta property="og:description" content="Home of OD Labs" />
+    <meta property="og:image" content="/" />
+    <meta property="og:url" content="https://www.od-labs.netlify.app" />
+    </Head>
 
       <Fragment>
           <video
