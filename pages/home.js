@@ -27,7 +27,7 @@ function Home() {
               xlinkHref="/images/transition-a-hidden.png"
               className='rotate-90 lg:rotate-0 opacity-0'
             ></image>
-            <a href="/hologram">
+            <a href="/hologram" xlinkHref="/hologram">
               <rect
                 x="454"
                 y="383"
