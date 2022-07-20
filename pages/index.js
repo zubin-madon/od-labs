@@ -3,10 +3,60 @@ import Image from 'next/image'
 import { Fragment } from 'react'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
+import Intro from '../components/intro';
+import { useState, useEffect } from 'react';
+import Home from '../components/home';
+import Hologram from '../components/hologram';
+import About from '../components/about';
 
 
 
 export default function Index() {
+const [visibility, setVisibility] = useState({
+  intro: true,
+  home: false,
+  hologram: false,
+  about: false
+})
+console.log(visibility)
+
+function setHome() {
+  setVisibility({
+    intro: false,
+    home: true,
+    hologram: false,
+    about: false
+  })
+}
+
+useEffect(()=>{
+  setVisibility({
+    intro: true,
+    home: false,
+    hologram: false,
+    about: false
+  })
+},[])
+
+function setHologram() {
+  setVisibility({
+    intro: false,
+    home: false,
+    hologram: true,
+    about: false
+  })
+}
+
+function setAbout() {
+  setVisibility({
+    intro: false,
+    home: false,
+    hologram: false,
+    about: true
+  })
+}
+
+
   return (
     <div className='parent relative h-screen w-screen'>
       <Head>
@@ -31,41 +81,37 @@ export default function Index() {
     <meta property="og:url" content="https://www.od-labs.netlify.app" />
     </Head>
 
-    <Fragment>
-          <video
-            src={"/videos/home.mp4"}
-            autoPlay
-            loop
-            muted
-            className="object-contain lg:object-cover h-screen w-screen absolute rotate-90 xl:rotate-0"
-          />
+    <div className={visibility.intro || 'hidden'}>
+    <Intro 
+      setHome = {setHome}
+      visibility = {visibility}
+    />
+    </div>
 
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 1920 1080"
-            className="object-cover h-screen w-screen absolute z-10 opacity-0 rotate-90 lg:rotate-0"
-          >
-            <image
-              width="1920"
-              height="1080"
-              xlinkHref="/images/home-hidden.png"
-              className='rotate-90 lg:rotate-0'
-            ></image>
-            <Link href="/home">
-              <rect
-                x="516"
-                y="437"
-                fill="#fff"
-                opacity="0"
-                width="393"
-                height="243"
-              ></rect>
-            </Link>
-          </svg>
-        
-      </Fragment>
+    <div className={visibility.home || 'hidden'}>
+    <Home 
+      setHologram = {setHologram}
+      setAbout = {setAbout}
+      visibility = {visibility}
+    />
+    </div>
+
+    <div className={visibility.hologram || 'hidden'}>
+    <Hologram 
+      setAbout = {setAbout}
+      visibility = {visibility}
+    />
+    </div>
+
+    <div className={visibility.about || 'hidden'}>
+    <About 
+      setHome = {setHome}
+      visibility = {visibility}
+    />
+    </div>
+
+
+          
 
     </div>
   );

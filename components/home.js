@@ -2,7 +2,20 @@ import React from 'react'
 import { Fragment } from 'react'
 import Link from "next/link";
 
-function Home() {
+function Home(props) {
+  function hologramClick(e) {
+    e.preventDefault();
+    console.log("clicked")
+    props.setHologram()
+    console.log(props.visibility)
+  }
+
+  function aboutClick(e) {
+    e.preventDefault();
+    console.log("clicked")
+    props.setAbout()
+    console.log(props.visibility)
+  }
   return (
     <Fragment>
           <video
@@ -26,7 +39,7 @@ function Home() {
               xlinkHref="/images/transition-a-hidden.png"
               className='rotate-90 lg:rotate-0 opacity-0'
             ></image>
-            <Link href="/hologram" xlinkHref="/hologram">
+             <a href='javascript:void(0)' onClick={hologramClick}>
               <rect
                 x="454"
                 y="383"
@@ -37,10 +50,10 @@ function Home() {
     
               >
               </rect>
-            </Link>
-            <Link href="/about">
+            </a>
+            <a href='javascript:void(0)' onClick={aboutClick}>
     <rect x="1680" y="160" fill="#fff" opacity="100" width="360" height="130"></rect>
-  </Link>
+  </a>
           </svg>
         
       </Fragment>

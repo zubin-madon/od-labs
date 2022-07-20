@@ -1,6 +1,13 @@
 import { Fragment } from "react";
 import Link from "next/link";
-function About() {
+function About(props) {
+
+  function homeClick(e) {
+    e.preventDefault();
+    console.log("clicked")
+    props.setHome()
+    console.log(props.visibility)
+  }
   return (
    <Fragment>
     <video
@@ -25,9 +32,9 @@ function About() {
           xlinkHref="/images/transition-a-hidden.png"
           className='rotate-90 lg:rotate-0 opacity-0'
         ></image>
-        <Link href="/home">
+        <a href='javascript:void(0)' onClick={homeClick}>
     <rect x="-250" y="735" fill="#fff" opacity="0" width="433" height="273"></rect>
-  </Link>
+  </a>
       </svg>
 </Fragment>
   )
