@@ -1,6 +1,5 @@
 import React from 'react'
 import { Fragment } from 'react'
-import Link from "next/link";
 
 function Home() {
   return (
@@ -26,7 +25,7 @@ function Home() {
               xlinkHref="/images/transition-a-hidden.png"
               className='rotate-90 lg:rotate-0 opacity-0'
             ></image>
-            <Link href="/hologram" xlinkHref="/hologram">
+            <a href="/hologram" xlinkHref="/hologram">
               <rect
                 x="454"
                 y="383"
@@ -37,10 +36,10 @@ function Home() {
     
               >
               </rect>
-            </Link>
-            <Link href="/about">
+            </a>
+            <a xlinkHref="/about">
     <rect x="1680" y="160" fill="#fff" opacity="100" width="360" height="130"></rect>
-  </Link>
+  </a>
           </svg>
         
       </Fragment>

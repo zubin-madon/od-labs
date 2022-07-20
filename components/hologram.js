@@ -1,13 +1,13 @@
-
-
-function Page(props) {
+import { Fragment } from "react";
+import Link from "next/link";
+function Hologram() {
   return (
-    <div className='parent relative h-screen w-screen'>
     <Fragment>
-          <video
-            src={props.video}
+        <video
+            src={"/videos/monster-hologram.mp4"}
             autoPlay
             muted
+            loop
             className="object-contain lg:object-cover h-screen w-screen absolute rotate-90 xl:rotate-0 z-0"
           />
          
@@ -22,10 +22,10 @@ function Page(props) {
             <image
               width="1920"
               height="1080"
-              xlinkHref={props.hiddenImage}
+              xlinkHref="/images/transition-a-hidden.png"
               className='rotate-90 lg:rotate-0 opacity-0'
             ></image>
-            <a href="/hologram">
+            <Link href="/hologram">
               <rect
                 x="454"
                 y="383"
@@ -37,14 +37,12 @@ function Page(props) {
               >
               </rect>
             </a>
-            <a xlinkHref="/about">
+            <Link href="/about">
     <rect x="1680" y="160" fill="#fff" opacity="100" width="360" height="130"></rect>
-  </a>
+  </Link>
           </svg>
-        
-      </Fragment>
-      </div>
+          </Fragment>
   )
 }
 
-export default Page
+export default Hologram

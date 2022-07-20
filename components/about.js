@@ -1,5 +1,4 @@
-import { Fragment } from "react";
-import Link from "next/link";
+import { Fragment } from "react"
 function About() {
   return (
    <Fragment>
@@ -25,9 +24,9 @@ function About() {
           xlinkHref="/images/transition-a-hidden.png"
           className='rotate-90 lg:rotate-0 opacity-0'
         ></image>
-        <Link href="/home">
+        <a xlinkHref="/home">
     <rect x="-250" y="735" fill="#fff" opacity="0" width="433" height="273"></rect>
-  </Link>
+  </a>
       </svg>
 </Fragment>
   )

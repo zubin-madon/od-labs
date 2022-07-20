@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link';
 
 
-export default function Home() {
+
+export default function Index() {
   return (
     <div className='parent relative h-screen w-screen'>
       <Head>
@@ -29,7 +31,7 @@ export default function Home() {
     <meta property="og:url" content="https://www.od-labs.netlify.app" />
     </Head>
 
-      <Fragment>
+    <Fragment>
           <video
             src={"/videos/home.mp4"}
             autoPlay
@@ -51,7 +53,7 @@ export default function Home() {
               xlinkHref="/images/home-hidden.png"
               className='rotate-90 lg:rotate-0'
             ></image>
-            <a href="/home">
+            <Link href="/home">
               <rect
                 x="516"
                 y="437"
@@ -60,7 +62,7 @@ export default function Home() {
                 width="393"
                 height="243"
               ></rect>
-            </a>
+            </Link>
           </svg>
         
       </Fragment>
