@@ -8,6 +8,10 @@ import { useState, useEffect } from 'react';
 import Home from '../components/home';
 import Hologram from '../components/hologram';
 import About from '../components/about';
+import MobileIntro from '../components/mobile/mobile-intro.js'
+import MobileHome from '../components/mobile/mobile-home';
+import MobileAbout from '../components/mobile/mobile-about';
+
 
 
 
@@ -24,6 +28,15 @@ function setHome() {
   setVisibility({
     intro: false,
     home: true,
+    hologram: false,
+    about: false
+  })
+}
+
+function setIntro() {
+  setVisibility({
+    intro: true,
+    home: false,
     hologram: false,
     about: false
   })
@@ -81,6 +94,7 @@ function setAbout() {
     <meta property="og:url" content="https://www.od-labs.netlify.app" />
     </Head>
 
+    <div className='desktop-site'>
     <div className={visibility.intro || 'hidden'}>
     <Intro 
       setHome = {setHome}
@@ -109,8 +123,28 @@ function setAbout() {
       visibility = {visibility}
     />
     </div>
+    </div>
+{/* Desktop site ended */}
 
+<div className='mobile-site md:hidden'>
+  <div className={visibility.intro || 'hidden'}>
+    <MobileIntro 
+      setHome = {setHome}
+    />
+    </div>
+    <div className={visibility.home || 'hidden'}>
+    <MobileHome 
+    setAbout = {setAbout} 
+    />
+    </div>
 
+    <div className={visibility.about || 'hidden'}>
+    <MobileAbout 
+    setIntro = {setIntro} 
+    />
+    </div>
+
+</div>
           
 
     </div>
