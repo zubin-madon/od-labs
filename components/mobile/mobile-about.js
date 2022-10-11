@@ -42,7 +42,7 @@ export default function MobileAbout(props) {
                   width="860"
                   height="1528"
                   xlinkHref="/images/mobile-intro-hidden.png"
-                  className='opacity-10'
+                  className='opacity-0'
                 ></image>
                <a href='javascript:void(0)' onClick={handleClick}>
                   <rect

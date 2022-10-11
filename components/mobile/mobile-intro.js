@@ -29,13 +29,13 @@ export default function MobileIntro(props) {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 860 1528"
-              className="object-cover h-screen w-screen  z-10 opacity-10 "
+              className="object-cover h-screen w-screen  z-10 opacity-10"
             >
               <image
                 width="860"
                 height="1528"
                 xlinkHref="/images/mobile-intro-hidden.png"
-                className='opacity-10'
+                className='opacity-0'
               ></image>
              <a href='javascript:void(0)' onClick={handleClick}>
                 <rect
