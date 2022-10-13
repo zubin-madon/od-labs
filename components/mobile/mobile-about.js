@@ -26,6 +26,7 @@ export default function MobileAbout(props) {
                 src={videoSrc}
                 autoPlay
                 muted
+                playsinline
                 className="object-contain"
                 onEnded={handleVideoEnded}
               />

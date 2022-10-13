@@ -28,7 +28,7 @@ export default function MobileHome(props) {
                 muted
                 className="object-contain"
                 onEnded={handleVideoEnded}
-                l
+                playsinline
               />
               </div>
               <div className="left-0 top-0 absolute">

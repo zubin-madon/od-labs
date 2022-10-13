@@ -20,6 +20,7 @@ export default function MobileIntro(props) {
               autoPlay
               loop
               muted
+              playsinline
               className="object-contain"
             />
             </div>
