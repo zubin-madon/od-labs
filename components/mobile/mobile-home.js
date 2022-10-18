@@ -24,11 +24,12 @@ export default function MobileHome(props) {
               <video
               ref= {vidRef}
                 src={videoSrc}
-                autoPlay
                 muted
+                autoPlay
+                autoBuffer
+                playsInline
                 className="object-contain"
                 onEnded={handleVideoEnded}
-                playsInline
               />
               </div>
               <div className="left-0 top-0 absolute">
