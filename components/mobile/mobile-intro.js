@@ -18,9 +18,11 @@ export default function MobileIntro(props) {
             <video
               src={"/videos/mobile/mobile-intro.mp4"}
               autoPlay
+              autoBuffer
               loop
               muted
-              playsinline
+              playsInline
+              
               className="object-contain"
             />
             </div>
