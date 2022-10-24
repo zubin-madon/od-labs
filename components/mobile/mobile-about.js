@@ -52,7 +52,7 @@ export default function MobileAbout(props) {
                     fill="#fff"
                     opacity="0"
                     width="400"
-                    height="600"
+                    height="900"
                   ></rect>
                 </a>
               </svg>
