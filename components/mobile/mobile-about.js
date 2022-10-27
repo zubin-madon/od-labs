@@ -24,9 +24,10 @@ export default function MobileAbout(props) {
               <video
               ref= {vidRef}
                 src={videoSrc}
-                autoPlay
                 muted
-                playsinline
+                autoPlay
+                autoBuffer
+                playsInline
                 className="object-contain"
                 onEnded={handleVideoEnded}
               />
